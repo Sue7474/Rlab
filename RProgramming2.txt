@@ -1,0 +1,72 @@
+#1 hist1- months distribution 
+hist(data$SurvivalMonths,
+  main=“Survival Months distribution”,
+  xlab=“SurvivalMonths ”,
+  ylab="FREQUENCY",
+  xlim=c(1, 100),
+  ylim=c(1,500),
+  col="blue",
+  border="black",
+  breaks=20)
+#2 hist2 tumor size
+hist(data$TumorSize,
+   main=“Tumor size distribution.”,
+   xlab=“Tumor size”,
+   ylab="FREQUENCY",
+   xlim=c(1, 100),
+   ylim=c(1,500),
+   col="green",
+   border="black",
+   breaks=20)
+
+#3 Boxplot Marital Status - survival months.
+ A<-boxplot(SurvivalMonths~MaritalStatus,
+ main='Marital status - Survival months',
+ data,
+ ylab = 'Survival Months',
+ xlab = 'Marital Status', 
+ col = c('lightblue', 'red', 'green')
+ )
+
+  A<-boxplot(Age~TumorSize,
+  main='Age - Tumor Size',
+  data,
+  ylab = 'Age',
+  xlab = 'Tumor Size', 
+  col = c('lightblue', 'red', 'green')
+  )
+A<-boxplot(Age ~ Grade,
+  main='Age - Grade',
+  data,
+  ylab = 'Age',
+  xlab = 'Grade', 
+  col = c('lightblue', 'red', 'green')
+  )
+
+#4 Scatter Plot between Survival Months and Marital Status
+plot(pro$SurvivalMonths,
+ pro$MaritalStatus,
+ main="Marital Status vs Survival Months",
+ xlab="Survival Months",
+ ylab="Marital Status",
+ col="red"
+ )
+
+plot(pro$TumorSize,
+  pro$SurvivalMonths,
+  main="Tumor Size vs Survival Months",
+  xlab="Tumor Size",
+  ylab="Survival Months",
+  col="darkorchid4"
+  )
+
+
+plot(pro$TumorSize,
+  pro$SurvivalMonths,
+  main="Tumor Size vs Survival Months",
+  xlab="Tumor Size",
+  ylab="Survival Months",
+  xlim=c(1,50),
+  ylim=c(1,50),
+  col="darkorchid4"
+  )
