@@ -1,1 +1,1 @@
-# Rlab
+# Class
